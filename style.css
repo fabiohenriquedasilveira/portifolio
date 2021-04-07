@@ -323,3 +323,269 @@ width: 100%;
 object-fit: cover;
 width: 100%;
 }
+
+.projetos{
+   display: flex; 
+   
+justify-content: space-evenly;
+  
+}
+.card{
+width: 18rem;
+height: 25rem;
+position: relative; /*fez o texto do card-info ficar posicionado no card.*/
+
+}
+
+.card-img-wrapper{
+width:100%;
+height: 100%;
+background-color: #262626;
+border-radius:.5rem ;
+opacity: .8;
+}
+
+.card
+.card-img-wrapper img{
+object-fit: cover;
+width:100%;
+height: 100%;
+border-radius:.5rem ;
+opacity: 0.8;
+}
+
+.card-info{
+
+
+position: absolute;
+bottom: 0; /*faz posicionar o texto card-info na parte de baixo do card*/
+opacity: 0;
+padding: 2rem;
+text-shadow: 0 0.1rem 0.3rem rgba(0.3rem, 0.3rem, rgba(0,0,0, .6));
+transition: all .3s; /* velocidade de transição*/
+}
+
+.card-info h2{
+font-family: var(--font-primary);
+font-size: 2rem;
+font-weight: 500;
+color: #eee;
+
+}
+
+.card-info h3{
+font-family: var(--font-action);
+font-weight: bolder;
+color: #ff4881;
+margin-bottom: 1.5rem;
+}
+
+.card-info p{
+font-family: var(--font-secundary);
+color: #eee;
+font-weight: bolder;
+width: 80%;
+margin-bottom: 2rem; /*distanciamento horizontal entre os elementos do  card*/
+
+}
+
+.btn{ /* configurações de estilo*/
+    background: #6a3096;
+    font-family: var(--font-action);
+    font-size: 1rem;
+    color: #eee;
+    border: none;
+    border-radius: .5rem ;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+}
+
+.card-info button{
+
+width: 8rem;
+height: 2.5rem;
+
+
+}
+
+.card:hover .card-info{ /*quando o mouse passar sobre a classe card, faça a seguinte formatação  no card-info*/
+    bottom: 2rem;
+opacity: 1;
+visibility: visible;
+}
+
+.sessao-contato{
+width: 100%;
+height: 100vh;
+background-color: #272727;
+display: flex;
+align-items: center; /*alinhar na vertical*/
+justify-content: center; /*alinhar na horizontal*/
+}
+
+.contato-wrapper{
+width: 60%;
+height: 30rem;
+display: flex;
+box-shadow: 0 2rem 5rem rgba(0, 0, 0, .5);
+width: 100%;
+text-align: center;
+}
+
+.contato-left{
+width: 35%;
+background: linear-gradient(rgba(15,15,15, 0.6), rgba(22, 22, 22, 0.9)), url(imagens/contato.jpg); /*muda a tonalidade da imagem na lateral do formulário contato linear-gradient vai de uma cor até outra*/
+background-size: cover;
+}
+
+.contato-right{
+width: 65%;  
+background-color: #eee;
+padding: 1rem 7rem 7rem 5rem;  /*padding: superior lateral-direita lateral2*/
+    
+}
+
+.sessao-contato h1{
+   font-family: var(--font-primary);
+color: #272727;
+font-size: 3rem;
+font-weight: lighter;
+}
+
+.sessao-contato form{
+width: 100%;
+display: flex; /*display flex por padrão o alinhamento dele  é em linha*/
+flex-direction: column;
+align-items: center;
+}
+
+.input-group{
+    position: relative;
+    left: 0;
+    padding-top: 1rem; /*solução temporária para a sobreposição do field-label e field*/
+}
+
+.field{
+background: transparent;
+border: none;
+width: 20rem;
+font-size: 1.5rem;
+font-family: var(--font-secundary);
+border-bottom: 2px dashed #636363;
+height: 2rem;
+outline: none; /*linha no label*/
+margin: 2rem 0;  /*espaçamento entre os campos*/
+
+}
+
+.field-label{
+position: absolute;
+left: 0;
+font-family: var(--font-secundary);
+text-transform: uppercase;
+top: 2rem;
+font-size: 1.2rem;
+transition: all 0.3s;
+}
+
+.field:focus ~ label{ /* ~ o fiel que receber o focus aplicará no label que esta a seguir dele */
+    top: 0;   /*quando o cursor estiver no label ex: NOME subira para top=0 dando espaço para digitar o nome.*/
+    font-size: 1rem;
+}
+
+.field:focus{
+border-bottom: solid 1px;
+}
+
+.input-group textarea{
+    padding-top: 1rem;
+    max-width: 30rem;
+max-height: 5rem;
+}
+
+.btn-submit{
+    font-size: 1.5rem;
+width: 100%;
+height: 2rem;
+text-transform: uppercase;
+   
+    
+}
+
+.sessao-orcamento{
+  width: 100%; 
+  height: 100vh; /* vh -> altura da tela do dispositovo do usuário*/
+background: url("/imagens/bg-orcamento.jpg");
+object-fit: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.orcamento-wrapper{
+    width: 60%;
+    height: 80%;
+background-color: #ffffff99;
+border-radius: 10px;
+box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
+position: relative;
+}
+
+.sessao-orcamento h1{
+position: absolute;
+color: #eee;
+left: 2rem;
+top: -2rem;
+background: #6a3096;
+padding: 0 3rem ; /*1ºvalor top e bottom e a 2º valor left e rigth*/
+font-family: var(--font-primary);
+font-size: 3rem;
+font-weight: lighter;
+box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5) ;
+border-radius: 10px;
+
+}
+
+.sessao-orcamento form{
+margin-top: 3rem; 
+margin-left: 3rem;
+margin-right: 3rem;
+display: grid;
+grid-template-columns: auto 1fr;
+column-gap: 2rem;
+row-gap: 2rem;
+}
+
+.sessao-orcamento label{
+font-family: var(--font-secundary);
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+width: 4rem;
+font-size: 2rem;
+outline: none;
+border-radius: 10px;
+border: none;
+padding: 0.3rem;
+}
+
+.btn-orcamento{
+text-transform: uppercase;
+padding: 1rem; /*valor único vale para todos os outros lados*/
+cursor: pointer;
+grid-column: 2;
+}
+
+
+.sessao-header2 h1{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: #2b4b4b;
+    border-bottom: solid 3px #6a3093;
+    margin-bottom: 1.5rem ;
+    display: flex;
+    
+justify-content: center; /*alinhamento horizontal*/
+}
