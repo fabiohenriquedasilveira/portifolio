@@ -14,3 +14,6 @@ O controle das tarefas desse projeto será realizado no GitHub
 
 ## Conhecimento
 :package: nova funcionalidade
+
+## Conhecimento2
+:package: nova funcionalidade
